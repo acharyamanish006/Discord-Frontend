@@ -1,0 +1,49 @@
+@import "src/Scss_Variable.scss";
+
+.navContainer {
+  flex: 0.1;
+  background-color: $DISCORD_Black_4;
+  height: 100vh;
+  .navWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .navDirectMessage {
+      padding: 0.5rem 0 0.5rem 0;
+      margin: 0 0 0.75rem 0;
+      border-bottom: 1px solid rgba(230, 227, 227, 0.362);
+    }
+    .navContent {
+      cursor: pointer;
+      // border: 1px solid white;
+      transition: all ease-in-out 300ms;
+      padding: 0.5rem;
+      &:hover {
+        border-radius: 1rem;
+        // color: white;
+        background-color: $DISCORD_Black_1;
+      }
+      margin-top: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .addServer {
+      cursor: pointer;
+      background-color: $DISCORD_Black_1;
+      border-radius: round($number: 100%);
+      padding: 0.7rem 1rem 0.7rem 1rem;
+      transition: all ease-in-out 300ms;
+      color: #0a8d20;
+      &:hover {
+        border-radius: 1rem;
+        color: white;
+        background-color: #0a8d20;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $MAX_Width) {
+  .navContainer {
+    flex: 0.05 !important;
+    // background-color: red !important;
+  }
+}
